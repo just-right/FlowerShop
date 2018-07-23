@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.flowershop.mybatis.ShoppingMapper">
+
+	<insert id="shoppingcart" >
+			INSERT into shoppingcart(flowerid,quantity,flowerprice,total,uid)
+				VALUES (#{0},#{1},#{2},#{3},#{4});
+	</insert>
+	
+	<select id="cartinfo" resultType="com.etc.flowershop.dto.ShoppingCart">
+		select * from shoppingcart where uid=#{0};
+	</select>
+	
+	<delete id="removecart" >
+		delete  from shoppingcart where flowerid=#{0} and uid=#{1};
+	</delete>
+
+	
+	<delete id="checkoutdeal" >
+		INSERT into ordersum(uid,name,address,city,country,email,phonenumber,totalprice,paymethodid,datetime,timestamp)
+				VALUES (#{0},#{1},#{2},#{3},#{4},#{5},#{6},#{7},#{8},#{9},#{10});
+	</delete>
+	
+
+	
+	<delete id="removesumcart" >
+		delete  from shoppingcart where uid=#{0};
+	</delete>
+	
+	<insert id="orderinfo" >
+			INSERT into orderinfo(flowerid,quantity,flowerprice,total,paymethod,orderid,flowername)
+				VALUES (#{0},#{1},#{2},#{3},#{4},#{5},#{6});
+	</insert>
+	
+	<select id="ordersum" resultType="com.etc.flowershop.dto.OrderSum">
+		select * from ordersum where timestamp=#{0};
+	</select>
+	
+	<select id="payment" resultType="com.etc.flowershop.dto.PayMent">
+		select * from payment where paymethodid=#{0};
+	</select>
+	
+	<select id="judgecart" resultType="com.etc.flowershop.dto.ShoppingCart">
+		select * from shoppingcart where flowerid=#{0} and uid=#{1};
+	</select>
+	
+	<update id="updatecart" >
+		update shoppingcart set quantity=quantity+#{0},total=total+#{1} where flowerid=#{2} and uid=#{3};
+	</update>
+	
+		  <!-- 分页SQL语句 -->
+  <select id="selectCartByPage" resultType="com.etc.flowershop.dto.ShoppingCart">
+  	select * from shoppingcart where uid=#{0} limit #{1},#{2};
+   
+  </select>
+  
+  <!-- 取得记录的总数 -->
+  <select id="getCartCount" resultType="int">
+    SELECT COUNT(*) FROM shoppingcart where uid=#{0}; 
+  </select>
+  <update id="updatefsum" >
+    update flower set AvailabilityNum = AvailabilityNum + #{0} where flowerid=#{1}; 
+  </update>
+  <select id="useraccount" resultType="com.etc.flowershop.dto.UserAccount">
+  	 	select * from useraccount where uid=#{0}; 
+  </select>
+  <update id="updateaccount">
+  	 	update useraccount set account=account+#{0} where uid=#{1}; 
+  </update>
+  
+  <select id="selectaccount" resultType="com.etc.flowershop.dto.UserAccount">
+  	 	select * from useraccount where uid=#{0}; 
+  </select>
+
+</mapper>

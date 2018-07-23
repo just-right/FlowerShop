@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<context:annotation-config />
+	<context:component-scan base-package="com.etc.flowershop.service" />
+	<context:component-scan base-package="com.etc.flowershop.dao" />
+	<context:component-scan base-package="com.etc.flowershop.mybatis" />
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!-- driverClassName表示的是当前使用的驱动 -->
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<!-- url表示的是连接数据库时的地址 -->
+		<property name="url" value="jdbc:mysql://localhost:3306/flowershop" />
+		<!-- username表示的是用户名 -->
+		<property name="username" value="root" />
+
+		<!-- 当前用户的密码 -->
+		<property name="password" value="wangyong159111" />
+	</bean>
+	<!-- ref叫做依赖，表示的是当前的属性要依赖于某一个bean -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:mybatis.xml" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 事务的配置 ，因为程序使用的是注解完成的配置，所以添加以下的注意配置 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+	<!-- 将事务与数据库进行关联的配置如下 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 所有的Mapper接口都需要基于此baseMapper来实现 -->
+	<bean id="baseMapper" class="org.mybatis.spring.mapper.MapperFactoryBean"
+		abstract="true" lazy-init="true">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="loginMapper" parent="baseMapper">
+		<property name="mapperInterface" value="com.etc.flowershop.mybatis.LoginMapper" />
+	</bean>
+	<bean id="registerMapper" parent="baseMapper">
+		<property name="mapperInterface" value="com.etc.flowershop.mybatis.RegisterMapper" />
+	</bean>
+	<bean id="shoppingMapper" parent="baseMapper">
+		<property name="mapperInterface" value="com.etc.flowershop.mybatis.ShoppingMapper" />
+	</bean>
+	<bean id="jumpMapper" parent="baseMapper">
+		<property name="mapperInterface" value="com.etc.flowershop.mybatis.JumpMapper" />
+	</bean>
+
+</beans>
+
+
+
+
+

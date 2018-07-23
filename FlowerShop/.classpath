@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/commons-io.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/mybatis-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/mybatis-spring-1.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/mysql-connector-java-5.0.6-bin.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-aop-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-aspects-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-beans-3.2.3.release-sources.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-beans-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-context-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-context-support-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-core-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-expression-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-jdbc-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-orm-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-tx-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-web-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/FlowerShop/WebContent/WEB-INF/lib/spring-webmvc-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web;#system#"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_21">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

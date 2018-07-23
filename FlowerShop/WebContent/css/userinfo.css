@@ -1,0 +1,145 @@
+.main > div {
+  display: inline-block;
+  width: 49%;
+  margin-top: 10px;
+}
+
+.two .register {
+  border: none;
+}
+.two .register h3 {
+  border-bottom-color: #909090;
+}
+.two .register .sep {
+  border-color: #909090;
+}
+
+.register {
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 7px solid #72B372;
+  border-radius: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: #F0F0F0;
+  box-shadow: 0 0 20px 0 #000000;
+}
+.register h3 {
+  margin: 0 15px 20px;
+  border-bottom: 2px solid #72B372;
+  padding: 5px 10px 5px 0;
+  font-size: 1.1em;
+}
+.register div {
+  margin: 0 0 15px 0;
+  border: none;
+}
+.register label {
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+  margin: 10px;
+}
+.register input[type=text], .register input[type=password] {
+  width: 65%;
+  font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,Sans-Serif;
+  padding: 5px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.07);
+}
+.register input[type=text]:focus, .register input[type=password]:focus {
+  background: #FFFFFF;
+}
+.register .button {
+  font-size: 1em;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #59B969;
+  box-shadow: 0 1px 0 0 #60BD49 inset;
+  background: #63E651;
+  background: -webkit-linear-gradient(#63E651, #42753E);
+  background: -moz-linear-gradient(#63E651, #42753E);
+  background: -o-linear-gradient(#63E651, #42753E);
+  background: linear-gradient(#63e651, #42753e);
+}
+.register .button:hover {
+  background: #51DB1C;
+  background: -webkit-linear-gradient(#51DB1C, #6BA061);
+  background: -moz-linear-gradient(#51DB1C, #6BA061);
+  background: -o-linear-gradient(#51DB1C, #6BA061);
+  background: linear-gradient(#51db1c, #6ba061);
+}
+.register .sep {
+  border: 1px solid #72B372;
+  position: relative;
+  margin: 35px 20px;
+}
+.register .or {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  background: #F0F0F0;
+  text-align: center;
+  margin: -10px 0 0 -25px;
+  line-height: 20px;
+}
+.register .connect {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.register .social-buttons {
+  display: inline-block;
+  min-width: 150px;
+  height: 50px;
+  margin: 0 5px 10px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 5px #000000;
+}
+.register .social-buttons a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 10px 15px;
+}
+.register .social-buttons span {
+  font-size: 30px;
+  margin-left: 35px;
+}
+.register .facebook {
+  background: #415EA3;
+  background: -webkit-linear-gradient(#415EA3, #2E4A88);
+  background: -moz-linear-gradient(#415EA3, #2E4A88);
+  background: -o-linear-gradient(#415EA3, #2E4A88);
+  background: linear-gradient(#415ea3, #2e4a88);
+}
+.register .facebook:hover {
+  background: #3B5591;
+  background: -webkit-linear-gradient(#3B5591, #2A437C);
+  background: -moz-linear-gradient(#3B5591, #2A437C);
+  background: -o-linear-gradient(#3B5591, #2A437C);
+  background: linear-gradient(#3b5591, #2a437c);
+}
+.register .facebook a {
+  background: url(../images/logo_fb_31x42.png) no-repeat 5% 10%;
+}
+.register .twitter {
+  background: #41C0F3;
+  background: -webkit-linear-gradient(#41C0F3, #3FBAEC);
+  background: -moz-linear-gradient(#41C0F3, #3FBAEC);
+  background: -o-linear-gradient(#41C0F3, #3FBAEC);
+  background: linear-gradient(#41c0f3, #3fbaec);
+}
+.register .twitter:hover {
+  background: #3EB1DF;
+  background: -webkit-linear-gradient(#3EB1DF, #3EAAD6);
+  background: -moz-linear-gradient(#3EB1DF, #3EAAD6);
+  background: -o-linear-gradient(#3EB1DF, #3EAAD6);
+  background: linear-gradient(#3eb1df, #3eaad6);
+}
+.register .twitter a {
+  background: url(../images/logo_twitter_38x32.png) no-repeat 6% 25%;
+}

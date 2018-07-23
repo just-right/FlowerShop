@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- jdbc数据库中的数据类型与mybatis数据库的一个匹配原则 -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+	<mappers>
+		<mapper resource="com/etc/flowershop/mybatis/LoginMapper.xml" />
+		<mapper resource="com/etc/flowershop/mybatis/RegisterMapper.xml" />
+		<mapper resource="com/etc/flowershop/mybatis/ShoppingMapper.xml" />
+		<mapper resource="com/etc/flowershop/mybatis/JumpMapper.xml" />
+	</mappers>
+</configuration>
